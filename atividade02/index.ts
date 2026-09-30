@@ -19,17 +19,17 @@ const novoMoto = new Moto({
     cilindradas: 293.5
 });
 
-console.log(`\nCarro cadastrado: ${novoCarro.getMarca}`);
+console.log(`Carro cadastrado: ${novoCarro.getMarca}`);
 console.log(`Modelo: ${novoCarro.getModelo}`);
 
-console.log(`\nMoto cadastrada: ${novoMoto.getMarca}`);
+console.log(`Moto cadastrada: ${novoMoto.getMarca}`);
 console.log(`Modelo: ${novoMoto.getModelo}`);
 
 // Interação via teclado utilizando herança (Os setters continuam funcionando perfeitamente)
-novoCarro.setMarca = readLine.question("\nDigite o nome atualizado da marca: ");
+novoCarro.setMarca = readLine.question("Digite o nome atualizado da marca: ");
 novoCarro.setModelo = readLine.question("Digite o novo modelo: ");
 
-novoMoto.setMarca = readLine.question("\nDigite o nome atualizado da marca: ");
+novoMoto.setMarca = readLine.question("Digite o nome atualizado da marca: ");
 novoMoto.setModelo = readLine.question("Digite o novo modelo: ");
 
 // Exibindo TODOS os dados dos veiculos no final

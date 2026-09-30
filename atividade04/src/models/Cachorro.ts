@@ -1,0 +1,29 @@
+import { Animal } from "./Animal.js";
+import { CachorroProps } from "../interfaces/AnimalProps.js";
+
+// Passamos CachorroProps para o Generic da classe mãe
+export class Cachorro extends Animal<CachorroProps>{
+
+    constructor(props: CachorroProps) {
+        super(props); // Repassa o objeto inteiro para a mãe de uma vez só
+    }
+
+    public get getPorte(): string { return this.props.porte; }
+    public get getPrecisaTosa(): boolean { return this.props.precisaTosa; }
+
+    public set setPorte(novoPorte: string) {
+        if (novoPorte.trim().length === 0) {
+            console.log("\n ERRO: O campo não pode ser vazio!");
+            return;
+        }
+        this.props.porte = novoPorte;
+    }
+
+    public set setPrecisaTosa(novoPrecisaTosa: boolean) {
+        if (novoPrecisaTosa === null) {
+            console.log("\n ERRO: O campo não pode ser vazio!");
+            return;
+        }
+        this.props.precisaTosa = novoPrecisaTosa;
+    }
+}

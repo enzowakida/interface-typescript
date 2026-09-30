@@ -1,7 +1,7 @@
 import { Veiculo } from "./Veiculo.js";
 import { MotoProps } from "../interfaces/VeiculoProps.js";
 
-// Passamos ClienteProps para o Generic da classe mãe
+// Passamos MotoProps para o Generic da classe mãe
 export class Moto extends Veiculo<MotoProps>{
 
     constructor(props: MotoProps) {
